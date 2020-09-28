@@ -5,6 +5,7 @@ import processing.core.PImage;
 
 public abstract class Elements {
 
+	//Images
 	PApplet app;
 	PImage background;
 	PImage señor;
@@ -56,6 +57,10 @@ public abstract class Elements {
 		this.señorsel = app.loadImage("img/señorsel.png");
 		this.background = app.loadImage("img/CampoBambu.png");
 		this.finalpage = app.loadImage("img/finalPage.png");
+		this.bambookaguya = app.loadImage("bambukaguya.png");
+		this.bamboocut = app.loadImage("img/bambucut.png");
+		this.bamboocutted = app.loadImage("img/bambucutted.png");
+		this.bamboofinal = app.loadImage("img/kaguyahime.png");
 	}
 	
 	public void paint() {
