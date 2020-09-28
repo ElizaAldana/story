@@ -32,6 +32,9 @@ public abstract class Elements {
 	PImage bamboofinal;
 	PImage finalpage;
 	
+	int posX;
+	int posY;
+	
 		
 	
 	public Elements(PApplet app) {
