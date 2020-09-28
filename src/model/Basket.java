@@ -9,7 +9,7 @@ public class Basket extends Elements {
 	}
 	
 	public void drawObject() {
-		app.image(basket, 20, 100);
+		app.image(basket, -250, 70);
 	}
 
 }

@@ -10,6 +10,11 @@ public class ControlStory {
 
 	public ControlStory(PApplet app) {
 	this.app = app;
-	logic = new Logic(app);
+	logic = new Logic(app); 
+	
+	}
+	
+	public void drawObject() {
+		logic.drawObject();
 	}
 }

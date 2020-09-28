@@ -9,6 +9,6 @@ public class Ojisan extends Elements {
 	}
 
 	public void drawObject() {
-		app.image(bamboo1, 20, 100);
+		app.image(señor, -150, -50);
 }
 }

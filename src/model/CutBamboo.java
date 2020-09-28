@@ -10,6 +10,6 @@ public class CutBamboo extends Elements {
 	}
 
 	public void drawObject() {
-		app.image(bamboo1, 20, 100);
+		app.image(bamboocut, 20, 100);
 }
 }

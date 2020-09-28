@@ -10,7 +10,7 @@ public class Kaguya extends Elements {
 	}
 
 	public void drawObject() {
-		app.image(bamboo1, 20, 100);
+		app.image(bambookaguya, 294, -320);
 }
 
 }

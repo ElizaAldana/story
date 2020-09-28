@@ -6,6 +6,8 @@ import processing.core.PImage;
 public abstract class Elements {
 
 	//Images
+	//PImage campo; prueba
+	
 	PApplet app;
 	PImage background;
 	PImage señor;
@@ -34,11 +36,16 @@ public abstract class Elements {
 	
 	public Elements(PApplet app) {
 		this.app = app;
+		loadImg();
 	}
 	
 	public abstract void drawObject();
 	
 	public void loadImg() {
+		//para las coordenadas
+		//this.campo = app.loadImage("img/CampoBambuf.jpg");
+
+		
 		this.basket = app.loadImage("img/basketempty.png");
 		this.basket1 = app.loadImage("img/basket1.png");
 		this.basket2 = app.loadImage("img/basket2.png");
@@ -51,19 +58,16 @@ public abstract class Elements {
 		this.bamboo3sel = app.loadImage("img/bambu3sel.png");
 		this.bamboo4 = app.loadImage("img/bambu4.png");
 		this.bamboo4sel = app.loadImage("img/bambu4sel.png");
-		this.bamboo5 = app.loadImage("img/bambu4.png");
+		this.bamboo5 = app.loadImage("img/bambu5.png");
 		this.bamboo5sel = app.loadImage("img/bambu5sel.png");
 		this.señor = app.loadImage("img/señorr.png");
 		this.señorsel = app.loadImage("img/señorsel.png");
 		this.background = app.loadImage("img/CampoBambu.png");
 		this.finalpage = app.loadImage("img/finalPage.png");
-		this.bambookaguya = app.loadImage("bambukaguya.png");
+		this.bambookaguya = app.loadImage("img/bambukaguya.png");
 		this.bamboocut = app.loadImage("img/bambucut.png");
 		this.bamboocutted = app.loadImage("img/bambucutted.png");
 		this.bamboofinal = app.loadImage("img/kaguyahime.png");
 	}
 	
-	public void paint() {
-		app.image(basket, 0, 0);
-	}
 }
