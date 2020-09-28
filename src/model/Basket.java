@@ -1,10 +1,15 @@
 package model;
 
+import processing.core.PApplet;
+
 public class Basket extends Elements {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Basket(PApplet app) {
+		super(app);
+	}
+	
+	public void drawObject() {
+		app.image(basket, 20, 100);
 	}
 
 }
