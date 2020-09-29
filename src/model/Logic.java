@@ -13,15 +13,25 @@ public class Logic {
 	
 	int posXBamboo;
 	int posYBamboo;
+	int posXbasket;
+	int posYbasket;
+	int posXkaguya;
+	int posYkaguya;
+	int posXojisan;
+	int posYojisan;
 	
 	public Logic(PApplet app) {
 		this.app = app;	
-		bamboo = new Bamboo(posXBamboo,posYBamboo,app);
 		posXBamboo = 397;
 		posYBamboo = -100;
-		ojisan = new Ojisan(app);
-		basket = new Basket(app);
-		bambookaguya = new Kaguya(app);
+		bamboo = new Bamboo(posXBamboo,posYBamboo,app);
+		ojisan = new Ojisan(posXojisan, posYojisan, app);
+		posXbasket = -250;
+		posYbasket = 70;
+		basket = new Basket(posXbasket,posYbasket, app);
+		basket.setCanasta(0);
+		System.out.println(basket.getCanasta());
+		bambookaguya = new Kaguya(posXkaguya, posYkaguya, app);
 		textos = app.loadStrings("txt/cuento.txt");
 	}
 	
@@ -35,7 +45,7 @@ public class Logic {
 				if(words[j].equals("Taketori")) {
 					ojisan.drawObject();
 				}
-				if(words[j].equals("luna")) {
+				if(words[j].equals("canasta")) {
 					basket.drawObject();
 				}
 				if(words[j].equals("joven")) {
@@ -43,11 +53,23 @@ public class Logic {
 				}
 			}
 		}
+		
+	
 	}
 	
-	public void moveObjectBamboo() {
-		posXBamboo = app.mouseX;
-		posYBamboo = app.mouseY;
+	public void mouseClickedBasket() {
+		switch (basket.getCanasta()) {
+		case 0:
+			if (app.mouseX > 20 && app.mouseY > 428  && app.mouseX < 170 && app.mouseY < 584) {
+			basket.setCanasta(1);
+			}
+			break;
+		case 1:
+			if (app.mouseX > 20 && app.mouseY > 428  && app.mouseX < 170 && app.mouseY < 584) {
+			basket.setCanasta(2);
+			}
+			break;
+		}
 	}
 	
 }

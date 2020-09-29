@@ -4,8 +4,8 @@ import processing.core.PApplet;
 
 public class Ojisan extends Elements {
 
-	public Ojisan(PApplet app) {
-		super(app);
+	public Ojisan(int posX, int posY,PApplet app) {
+		super(posX, posY, app);
 	}
 
 	public void drawObject() {

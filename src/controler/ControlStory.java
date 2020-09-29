@@ -16,9 +16,11 @@ public class ControlStory {
 	
 	public void drawObject() {
 		logic.drawObject();
+	
 	}
 	
-	public void moveObjectBamboo() {
-		logic.moveObjectBamboo();
+	public void mouseClicked() {
+		logic.mouseClickedBasket();
 	}
+
 }

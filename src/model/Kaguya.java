@@ -5,8 +5,8 @@ import processing.core.PApplet;
 public class Kaguya extends Elements {
 
 
-	public Kaguya(PApplet app) {
-	super(app);
+	public Kaguya(int posX, int posY, PApplet app) {
+	super(posX, posY, app);
 	}
 
 	public void drawObject() {

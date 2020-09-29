@@ -4,8 +4,8 @@ import processing.core.PApplet;
 
 public class CutBamboo extends Elements {
 
-	public CutBamboo(PApplet app) {
-		super(app);
+	public CutBamboo(int posX, int posY, PApplet app) {
+		super(posX, posY, app);
 
 	}
 
