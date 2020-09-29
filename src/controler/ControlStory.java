@@ -16,11 +16,15 @@ public class ControlStory {
 	
 	public void drawObject() {
 		logic.drawObject();
-	
 	}
 	
 	public void mouseClicked() {
 		logic.mouseClickedBasket();
+		logic.mouseClickedKaguya();
+	}
+	
+	public void mousePressed() {
+		logic.mousePressedBamboo();
 	}
 
 }

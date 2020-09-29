@@ -29,7 +29,9 @@ public class Main extends PApplet {
 	public void draw () {
 	background(0);
 	controler.drawObject();
-	
+	if (mousePressed) {
+		controler.mousePressed();
+	}
 		
 	//coordinates
 	text(mouseX+","+mouseY,mouseX,mouseY);
@@ -39,6 +41,13 @@ public class Main extends PApplet {
 	controler.mouseClicked();
 	}
 	
-		
+	public void mousePressed() {
+	controler.mousePressed();
+	a = a+1;
+	System.out.println(a);
+	}
+	
+	int a;
+	
 }
 

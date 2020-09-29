@@ -31,16 +31,25 @@ public abstract class Elements {
 	int posX;
 	int posY;
 	int canasta;
-		
+	int kaguya;
 	
 	public Elements(int posX, int posY, PApplet app) {
 		this.app = app;
 		this.posX = posX;
 		this.posY = posY;
 		this.canasta = 0;
+		this.kaguya = 0;
 		loadImg();
 	}
 	
+	public int getKaguya() {
+		return kaguya;
+	}
+
+	public void setKaguya(int kaguya) {
+		this.kaguya = kaguya;
+	}
+
 	public int getCanasta() {
 		return canasta;
 	}

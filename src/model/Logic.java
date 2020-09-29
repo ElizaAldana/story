@@ -22,16 +22,18 @@ public class Logic {
 	
 	public Logic(PApplet app) {
 		this.app = app;	
-		posXBamboo = 397;
-		posYBamboo = -100;
+		posXBamboo = 397+259;
+		posYBamboo = 250;
 		bamboo = new Bamboo(posXBamboo,posYBamboo,app);
 		ojisan = new Ojisan(posXojisan, posYojisan, app);
 		posXbasket = -250;
 		posYbasket = 70;
 		basket = new Basket(posXbasket,posYbasket, app);
 		basket.setCanasta(0);
-		System.out.println(basket.getCanasta());
+		posXkaguya = 294;
+		posYkaguya = -320;
 		bambookaguya = new Kaguya(posXkaguya, posYkaguya, app);
+		bambookaguya.setKaguya(0);
 		textos = app.loadStrings("txt/cuento.txt");
 	}
 	
@@ -41,6 +43,9 @@ public class Logic {
 			for (int j = 0; j < words.length; j++) {
 				if(words[j].equals("bambu")) {
 					bamboo.drawObject();
+					if (app.mousePressed) {
+						mousePressedBamboo();
+					}
 				}
 				if(words[j].equals("Taketori")) {
 					ojisan.drawObject();
@@ -72,4 +77,24 @@ public class Logic {
 		}
 	}
 	
+	public void mouseClickedKaguya() {
+		switch (bambookaguya.getKaguya()) {
+		case 0:
+			if (app.mouseX > 524 && app.mouseY > 7  && app.mouseX < 625 && app.mouseY < 277) {
+				bambookaguya.setKaguya(1);
+			}
+			break;
+		case 1:
+			if (app.mouseX > 524 && app.mouseY > 7  && app.mouseX < 625 && app.mouseY < 277) {
+				bambookaguya.setKaguya(3);
+			}
+			break;
+		}
+	}
+	public void mousePressedBamboo() {
+		//if (app.mouseX > posXBamboo-273 && app.mouseY > posYBamboo-300  && app.mouseX < posXBamboo+273 && app.mouseY < posYBamboo+300) {
+			posXBamboo = app.mouseX;
+			posYBamboo = app.mouseY;
+			//} 
+	}
 }
