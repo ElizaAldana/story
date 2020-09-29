@@ -41,13 +41,6 @@ public class Main extends PApplet {
 	controler.mouseClicked();
 	}
 	
-	public void mousePressed() {
-	controler.mousePressed();
-	a = a+1;
-	System.out.println(a);
-	}
-	
-	int a;
 	
 }
 

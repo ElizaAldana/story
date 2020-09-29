@@ -25,6 +25,8 @@ public class Logic {
 		posXBamboo = 397+259;
 		posYBamboo = 250;
 		bamboo = new Bamboo(posXBamboo,posYBamboo,app);
+		posXojisan = 200;
+		posYojisan = 400;
 		ojisan = new Ojisan(posXojisan, posYojisan, app);
 		posXbasket = -250;
 		posYbasket = 70;
@@ -35,6 +37,7 @@ public class Logic {
 		bambookaguya = new Kaguya(posXkaguya, posYkaguya, app);
 		bambookaguya.setKaguya(0);
 		textos = app.loadStrings("txt/cuento.txt");
+		
 	}
 	
 	public void drawObject() {
@@ -43,12 +46,15 @@ public class Logic {
 			for (int j = 0; j < words.length; j++) {
 				if(words[j].equals("bambu")) {
 					bamboo.drawObject();
-					if (app.mousePressed) {
-						mousePressedBamboo();
+					if (app.mouseX > bamboo.getPosX()-73 && app.mouseY > bamboo.getPosY()-300  && app.mouseX < bamboo.getPosX()+73 && app.mouseY < bamboo.getPosY()+300) {
+						bamboo.lightObject(); 
 					}
 				}
 				if(words[j].equals("Taketori")) {
 					ojisan.drawObject();
+					if (app.mouseX > ojisan.getPosX()-150 && app.mouseY > ojisan.getPosY()-275  && app.mouseX < ojisan.getPosX()+100 && app.mouseY < ojisan.getPosY()+170) {
+						ojisan.lightObject();
+						} 
 				}
 				if(words[j].equals("canasta")) {
 					basket.drawObject();
@@ -92,9 +98,16 @@ public class Logic {
 		}
 	}
 	public void mousePressedBamboo() {
-		//if (app.mouseX > posXBamboo-273 && app.mouseY > posYBamboo-300  && app.mouseX < posXBamboo+273 && app.mouseY < posYBamboo+300) {
-			posXBamboo = app.mouseX;
-			posYBamboo = app.mouseY;
-			//} 
+		if (app.mouseX > bamboo.getPosX()-73 && app.mouseY > bamboo.getPosY()-300  && app.mouseX < bamboo.getPosX()+73 && app.mouseY < bamboo.getPosY()+300) {
+		bamboo.setPosX(app.mouseX);
+		bamboo.setPosY(app.mouseY);
+		} 
+	}
+	
+	public void mousePressedOjisan() {
+		if (app.mouseX > ojisan.getPosX()-150 && app.mouseY > ojisan.getPosY()-275  && app.mouseX < ojisan.getPosX()+100 && app.mouseY < ojisan.getPosY()+170) {
+		ojisan.setPosX(app.mouseX);
+		ojisan.setPosY(app.mouseY);
+		} 
 	}
 }

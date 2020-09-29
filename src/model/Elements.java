@@ -42,6 +42,27 @@ public abstract class Elements {
 		loadImg();
 	}
 	
+	
+	public int getPosX() {
+		return posX;
+	}
+
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+
+	public int getPosY() {
+		return posY;
+	}
+
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+
 	public int getKaguya() {
 		return kaguya;
 	}
@@ -59,6 +80,8 @@ public abstract class Elements {
 	}
 
 	public abstract void drawObject();
+	
+	public abstract void lightObject();
 	
 	public void loadImg() {
 		//para las coordenadas

@@ -8,6 +8,11 @@ public class Bamboo extends Elements {
 	
 	public Bamboo(int posX,int posY, PApplet app) {
 		super(posX, posY,app);
+		
+	}
+	public void lightObject() {
+		app.imageMode(PConstants.CENTER);
+		app.image(bamboo1sel, posX, posY);
 	}
 	
 	public void drawObject() {

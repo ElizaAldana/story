@@ -1,6 +1,7 @@
 package model;
 
 import processing.core.PApplet;
+import processing.core.PConstants;
 
 public class Ojisan extends Elements {
 
@@ -9,6 +10,12 @@ public class Ojisan extends Elements {
 	}
 
 	public void drawObject() {
-		app.image(señor, -150, -50);
+		app.imageMode(PConstants.CENTER);
+		app.image(señor, posX, posY);
 }
+	public void lightObject() {
+		app.imageMode(PConstants.CENTER);
+		app.image(señorsel, posX+5, posY-10);
+	}
+
 }

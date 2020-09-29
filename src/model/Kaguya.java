@@ -1,6 +1,7 @@
 package model;
 
 import processing.core.PApplet;
+import processing.core.PConstants;
 
 public class Kaguya extends Elements {
 
@@ -11,6 +12,7 @@ public class Kaguya extends Elements {
 	}
 
 	public void drawObject() {
+		app.imageMode(PConstants.CORNER);
 
 		switch (kaguya) {
 		case 0:
@@ -31,6 +33,9 @@ public class Kaguya extends Elements {
 			
 			break;
 		}
+	}
+	public void lightObject() {
+		
 	}
 
 }

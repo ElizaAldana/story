@@ -25,6 +25,7 @@ public class ControlStory {
 	
 	public void mousePressed() {
 		logic.mousePressedBamboo();
+		logic.mousePressedOjisan();
 	}
 
 }
